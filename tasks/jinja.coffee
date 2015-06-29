@@ -81,7 +81,6 @@ module.exports = (grunt) ->
           throw new Error """Couldn't find "#{ src }" in template dirs: #{ templateDirs.join ', ' }"""
         mycontext = options.preCompile templateName
         context = _.extend {}, loadContext('_all', false), loadContext(templateName) ,mycontext
-        console.log context
         tmpl = env.getTemplate templateName
         try
           output = tmpl.render context
