@@ -30,6 +30,7 @@ module.exports = (grunt) ->
       templateDirs: [path.join process.cwd(), 'templates']
       contextRoot: path.join process.cwd(), 'template-context'
       preCompile: noop
+      init: noop
       filters: {}
 
     
@@ -57,7 +58,7 @@ module.exports = (grunt) ->
         envOptions[k] = v
 
     env = new nunjucks.Environment loaders, envOptions
-
+    env=mycontext = options.init env
     # Add custom filters
     for own k, v of options.filters
       env.addFilter k, v
