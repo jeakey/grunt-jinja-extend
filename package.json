@@ -1,7 +1,7 @@
 {
   "name": "grunt-jinja-extend",
   "description": "A grunt plugin for compiling Jinja2 templates with nunjucks.",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "homepage": "https://github.com/jeakey/grunt-jinja-extend",
   "author": {
     "name": "jeakey",
